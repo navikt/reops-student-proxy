@@ -1,7 +1,7 @@
-ResearchOps Proxy
+ResearchOps Student Proxy
 ================
 
-ResearchOps Proxy hjelper team hente ut data fra Amplitude og Siteimprove.
+ResearchOps Student Proxy hjelper Team Metrikk Arkitektene hente ut data fra Amplitude og Siteimprove.
 
 ---
 
@@ -12,21 +12,21 @@ ResearchOps Proxy hjelper team hente ut data fra Amplitude og Siteimprove.
 
 ## Proxy endepunkt
 
-https://reops-proxy.intern.nav.no/<api_navn>/<api_endepunkt>
+http://localhost:8085/<api_navn>/<api_endepunkt>
 
-## Slik får du tilgang til proxyen
+## Slik bruker du ResearchOps Student Proxy
 
-1. Logg inn med naisdevice lokalt på maskinen din
-2. Du kan nå gjøre GET forespørsler til proxyens endepunkt
-
-Ønsker du å koble til en app som er på GCP? Ta kontakt med Team ResearchOps på Slack i
-kanalen [#researchops](https://nav-it.slack.com/archives/C02UGFS2J4B) så åpner vi opp for appen din.
+1. Last ned koden fra GitHub
+2. Installer pakker ved å kjøre NPM install
+3. Legg til en .env fil i rotmappen tilsendt av Team ResearchOps
+4. Kjør koden ved å kjøre `npm start`
+5. Du kan nå gjøre GET forespørsler til proxyens endepunkt
 
 ## Siteimprove
 
 ### Proxy endepunkt
 
-https://reops-proxy.intern.nav.no/siteimprove/<siteimprove_api_endepunkt>
+http://localhost:8085/siteimprove/<siteimprove_api_endepunkt>
 
 ### Tilgjengelige Siteimprove API endepunkter
 
@@ -43,13 +43,13 @@ Dataene vises i JSON format.
 ### Eksempel på bruk av API
 
 Følgende henter ut en liste over alle nettsider lagt til i Siteimprove:
-https://reops-proxy.intern.nav.no/siteimprove/sites
+http://localhost:8085/siteimprove/sites
 
 ## Amplitude
 
 ### Proxy endepunkt
 
-https://reops-proxy.intern.nav.no/amplitude/<amplitude_api_endepunkt>
+http://localhost:8085/amplitude/<amplitude_api_endepunkt>
 
 ### Tilgjengelige Amplitude APIer med GET requests
 
@@ -57,12 +57,6 @@ https://reops-proxy.intern.nav.no/amplitude/<amplitude_api_endepunkt>
 - [Behavioral Cohorts API](https://www.docs.developers.amplitude.com/analytics/apis/behavioral-cohorts-api/)
 - [Chart Annotations API](https://www.docs.developers.amplitude.com/analytics/apis/chart-annotations-api/)
 - [Export API](https://www.docs.developers.amplitude.com/analytics/apis/export-api/)
-
-### Amplitude prosjekttilgang
-
-Proxyen gir tilgang til Amplitude prosjektet "Nav.no - Produksjon" som inneholder data fra nav.no-domenet i produksjon.
-Ved ønske om tilgang til andre prosjekter, ta kontakt med Team ResearchOps på Slack i
-kanalen [#researchops](https://nav-it.slack.com/archives/C02UGFS2J4B).
 
 ### Dokumentasjon
 
@@ -75,7 +69,7 @@ Dataene vises i JSON format.
 ### Eksempel på bruk av API
 
 Følgende henter ut data tilknyttet en graf i Amplitude:
-https://reops-proxy.intern.nav.no/amplitude/api/3/chart/63ty1xg/query
+http://localhost:8085/amplitude/100004455/api/3/chart/e-qkzbeqxh/query
 
 # Henvendelser og veiledning
 
