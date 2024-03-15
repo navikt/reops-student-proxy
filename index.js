@@ -32,6 +32,13 @@ app.get('/amplitude/100004455/api/*', (req, res) => {
     amplitudeProxy(authToken, requestUrl, res)
 });
 
+// Amplitude Prosjekt: Blogg
+app.get('/amplitude/100002286/api/*', (req, res) => {
+    const requestUrl = req.url.replace(/\/amplitude\/100002286/, '')
+    const authToken = process.env.AMPLITUDE_100002286
+    amplitudeProxy(authToken, requestUrl, res)
+});
+
 const amplitudeProxy = (authToken, requestUrl, proxyResponse) => {
     let apiUrl = "https://analytics.eu.amplitude.com";
     const options = {headers: {Authorization: "Basic " + authToken}};
